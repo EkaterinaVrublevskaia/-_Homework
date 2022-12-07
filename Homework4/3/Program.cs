@@ -26,12 +26,12 @@ int[] ArrayNumbers(int arrayLength)
             array[i] = number; 
                                 
         }
-          
+           
     }
     return array;  
-}*/
+}
 
-/*void printArray(int[] array)
+void printArray(int[] array)
 {
     
     for(int i = 0; i < array.Length; i++);
@@ -40,9 +40,9 @@ int[] ArrayNumbers(int arrayLength)
     }
     Console.WriteLine(); 
 }
-/*
+
 //Без метода работает
-Console.Write("Введите длинну массива: ");
+/*Console.Write("Введите длинну массива: ");
 bool inParseArrayLength = int.TryParse(Console.ReadLine(), out int arrayLength);
 if (inParseArrayLength)
 {
