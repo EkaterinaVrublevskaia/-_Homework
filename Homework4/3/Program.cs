@@ -5,14 +5,14 @@
 
 
 //  Не получается вывести массив в методе, без метода работает. Чуть ниже код   
-Console.Write("Введите длинну массива: ");
-int arrayLength = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите массив чисел: ");
-int[] arrayNum = ArrayNumbers(arrayLength);
+//Console.Write("Введите длинну массива: ");
+//int arrayLength = int.Parse(Console.ReadLine());
+//Console.WriteLine("Введите массив чисел: ");
+//int[] arrayNum = ArrayNumbers(arrayLength);
 //Console.Write($"{arrayNum}, ");
 //printArray(arrayNum);
 //int [] arrayNumbers = ArrayNumbers(numbers);
-
+/*
 int[] ArrayNumbers(int arrayLength)
 {
     int[] array = new int[arrayLength];
@@ -39,10 +39,10 @@ void printArray(int[] array)
       Console.Write($"{array}, ");           
     }
     Console.WriteLine(); 
-}
+}*/
 
 //Без метода работает
-/*Console.Write("Введите длинну массива: ");
+Console.Write("Введите длинну массива: ");
 bool inParseArrayLength = int.TryParse(Console.ReadLine(), out int arrayLength);
 if (inParseArrayLength)
 {
@@ -66,5 +66,5 @@ for(int i = 0; i < array.Length; i++)
     Console.Write($"{array[i]}, ");     
 }
 Console.WriteLine(); 
-*/
+
 
