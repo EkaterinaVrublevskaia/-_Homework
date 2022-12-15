@@ -2,10 +2,10 @@
 //Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
 //Напишите программу, которая покажет количество чётных чисел в массиве.
 //[345, 897, 568, 234] -> 2
-//рандом - проверка на положительное 3 три числа - проверить числа четное или нет, если четное 
-//записатьв cout
 
-Random random = new Random();
+using static Coomon.Helper;
+
+//Random random = new Random();
 Console.Write("Введите длинну массива: ");
 bool inParseArrayLength = int.TryParse(Console.ReadLine(), out int arrayLength);
 if (inParseArrayLength)
@@ -14,7 +14,7 @@ if (inParseArrayLength)
     
 }
 
-int[] randomArray = RandomNumberArray(arrayLength);
+int[] randomArray = Common.Helper.RandomNumberArray();
 printArray(randomArray);
 
 int count = EvenNumbersArray(randomArray);
@@ -38,7 +38,7 @@ int EvenNumbersArray(int[] randomArray)
 
 }
 
-
+/*
 int[] RandomNumberArray(int arrayLength)
 {
     int[] array = new int[arrayLength];
@@ -58,7 +58,7 @@ void printArray(int[] array)
     }
     Console.WriteLine();  
 }
-
+*/
  
 /*int[] array = new int[arrayLength];
 for(int i = 0; i < arrayLength; i++)
