@@ -2,6 +2,58 @@
 
 public static class Helper
 {
+    public static void Print2DArray(int[,] array)
+    {
+        for (var i = 0; i < array.GetLength(0); i++)
+        {
+            for (var j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write($"{array[i, j]} ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public static void Print2DdoubleArray(double[,] array)
+    {
+        for (var i = 0; i < array.GetLength(0); i++)
+        {
+            for (var j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write($"{array[i, j]} ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public static double[,] CreateRandom2DDoubleArray(int CountOfRows, int CountOfColumns)
+    {
+        Random random = new Random();
+        double[,] array = new double[CountOfRows, CountOfColumns];
+        for (var i = 0; i < array.GetLength(0); i++)
+        {
+            for (var j = 0; j < array.GetLength(1); j++)
+            {
+                array[i, j] = Math.Round(random.NextDouble() * (-11 + 10) - 10, 2);
+            }
+        }
+        return array;
+    }
+
+    public static int[,] CreateRandom2DArray(int CountOfRows, int CountOfColumns)
+    {
+        Random random = new Random();
+        int[,] array = new int[CountOfRows, CountOfColumns];
+        for (var i = 0; i < array.GetLength(0); i++)
+        {
+            for (var j = 0; j < array.GetLength(1); j++)
+            {
+                array[i, j] = random.Next(0, 15);
+            }
+        }
+        return array;
+    }
+
     public static int[] RandomNumberArray(int arrayLength)
     {
         Random random = new Random();
@@ -17,7 +69,7 @@ public static class Helper
     {
         for (int i = 0; i < array.Length; i++)
         {
-            Console.Write($"{array[i]} ");
+            Console.Write($"{array[i]}, ");
         }
         Console.WriteLine();
     }
@@ -38,16 +90,16 @@ public static class Helper
     }
 
     public static int InputNumber()
-{
-    bool inParsenum = int.TryParse(Console.ReadLine(), out int num);
+    {
+        bool inParsenum = int.TryParse(Console.ReadLine(), out int num);
         if (inParsenum)
-    {
-        return num;
+        {
+            return num;
+        }
+        else
+        {
+            Console.Write("Введино некорректное число ");
+            return -1;
+        }
     }
-    else
-    {
-        Console.Write("Введино некорректное число ");
-        return -1;
-    }
-}
 }
