@@ -2,6 +2,13 @@
 
 public static class Helper
 {
+    public static int InputNumbers(string input)
+    {
+        Console.Write(input);
+        int output = Convert.ToInt32(Console.ReadLine());
+        return output;
+    }
+
     public static void Print2DArray(int[,] array)
     {
         for (var i = 0; i < array.GetLength(0); i++)
